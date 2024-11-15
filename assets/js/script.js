@@ -501,6 +501,8 @@ console.log(removeIndex(0));
 */
 console.log("-----es 20-----");
 
+const container = document.getElementById('container');
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
