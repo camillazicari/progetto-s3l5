@@ -611,15 +611,15 @@ console.log("-----es 29-----");
 
 function isItPrime(num) {
     if (num < 2) {
-      return false;
+      return false; 
     }
     for (let i = 2; i <= Math.sqrt(num); i++) {
       if (num % i === 0) {
         return false; 
-      } else {
-        return true; 
       }
     }
+    return true; 
   }
+  
   
 isItPrime(40);
