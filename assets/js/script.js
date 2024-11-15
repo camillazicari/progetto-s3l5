@@ -253,15 +253,15 @@ console.log(deleteOne("volare in alto", true));
 console.log("-----es 5-----");
 
 function onlyLetters(string) {
-    let noNumbers= '';
-    for (let i=0; i<string.length; i++) {
-        if (isNaN(string[i]) || string[i] === ' ') {
-            noNumbers += string[i];
-        }
+  let noNumbers = "";
+  for (let i = 0; i < string.length; i++) {
+    if (isNaN(string[i]) || string[i] === " ") {
+      noNumbers += string[i];
     }
-    return noNumbers;
+  }
+  return noNumbers;
 }
-console.log(onlyLetters('740 pagine di codice'));
+console.log(onlyLetters("740 pagine di codice"));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
@@ -269,10 +269,10 @@ console.log(onlyLetters('740 pagine di codice'));
 console.log("-----es 6-----");
 
 function isThisAnEmail(email) {
-    const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return regexEmail.test(email);
+  const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return regexEmail.test(email);
 }
-console.log(isThisAnEmail('camilla@me.it'));
+console.log(isThisAnEmail("camilla@me.it"));
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
@@ -280,10 +280,18 @@ console.log(isThisAnEmail('camilla@me.it'));
 console.log("-----es 7-----");
 
 function whatDayIsIt() {
-    let today = new Date();
-    let dayOfWeek = today.getDay();
-    let nameOfDays = ['Domenica','Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
-    return nameOfDays[dayOfWeek];
+  let today = new Date();
+  let dayOfWeek = today.getDay();
+  let nameOfDays = [
+    "Domenica",
+    "Lunedì",
+    "Martedì",
+    "Mercoledì",
+    "Giovedì",
+    "Venerdì",
+    "Sabato",
+  ];
+  return nameOfDays[dayOfWeek];
 }
 console.log(whatDayIsIt());
 
@@ -302,17 +310,17 @@ console.log(whatDayIsIt());
 console.log("-----es 8-----");
 
 function rollTheDices(num) {
-    let total = 0;
-    let values = [];
-    for (let i=0; i<num; i++) {
-        let roll = dice();
-        values.push(roll);
-        total += roll;
-    }
-    return {
-        sum: total,
-        values: values,
-    };
+  let total = 0;
+  let values = [];
+  for (let i = 0; i < num; i++) {
+    let roll = dice();
+    values.push(roll);
+    total += roll;
+  }
+  return {
+    sum: total,
+    values: values,
+  };
 }
 console.log(rollTheDices(2));
 
@@ -322,15 +330,15 @@ console.log(rollTheDices(2));
 console.log("-----es 9-----");
 
 function howManyDays(date) {
-    let today = new Date();
-    let myDate = new Date(date);
-    let howManyMilliseconds = today-myDate;
-    let howManySeconds = howManyMilliseconds/1000;
-    let howManyMinutes = howManySeconds/3600;
-    let manyDays = howManyMinutes/24;
-    return Math.floor(manyDays);
+  let today = new Date();
+  let myDate = new Date(date);
+  let howManyMilliseconds = today - myDate;
+  let howManySeconds = howManyMilliseconds / 1000;
+  let howManyMinutes = howManySeconds / 3600;
+  let manyDays = howManyMinutes / 24;
+  return Math.floor(manyDays);
 }
-console.log(howManyDays('2024-11-1'));
+console.log(howManyDays("2024-11-1"));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -338,14 +346,17 @@ console.log(howManyDays('2024-11-1'));
 console.log("-----es 10-----");
 
 function isTodayMyBirthday() {
-    let today = new Date();
-    let myBirthdayMonth = 3;
-    let myBirthdayDay = 21;
-    if (today.getMonth + 1 === myBirthdayMonth && today.getDate === myBirthdayDay) {
-        return true;
-    } else {
-        return false
-    }
+  let today = new Date();
+  let myBirthdayMonth = 3;
+  let myBirthdayDay = 21;
+  if (
+    today.getMonth + 1 === myBirthdayMonth &&
+    today.getDate === myBirthdayDay
+  ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(isTodayMyBirthday());
 
@@ -360,11 +371,11 @@ console.log(isTodayMyBirthday());
 console.log("-----es 11-----");
 
 function deleteProp(obj, string) {
-    delete obj[string];
-    return obj;
+  delete obj[string];
+  return obj;
 }
-const brother = {name: 'Alessandro', surname: 'Zicari', age: 16};
-console.log(deleteProp(brother, 'age'));
+const brother = { name: "Alessandro", surname: "Zicari", age: 16 };
+console.log(deleteProp(brother, "age"));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -372,17 +383,17 @@ console.log(deleteProp(brother, 'age'));
 console.log("-----es 12-----");
 
 function newestMovie() {
-    let myYear = 1000;
-    let recentMovie;
-    movies.forEach((element) => {
-        let movieYear = parseInt(element.Year);
-        if (movieYear > myYear) {
-            myYear = movieYear;
-            recentMovie = {...element};
-        }
-    })
-    return recentMovie;
+  let myYear = 1000;
+  let recentMovie;
+  movies.forEach((element) => {
+    let movieYear = parseInt(element.Year);
+    if (movieYear > myYear) {
+      myYear = movieYear;
+      recentMovie = { ...element };
     }
+  });
+  return recentMovie;
+}
 console.log(newestMovie());
 
 /* ESERCIZIO 13
@@ -391,7 +402,7 @@ console.log(newestMovie());
 console.log("-----es 13-----");
 
 function countMovies() {
-    return movies.length;
+  return movies.length;
 }
 console.log(countMovies());
 
@@ -401,9 +412,9 @@ console.log(countMovies());
 console.log("-----es 14-----");
 
 function onlyTheYears(array) {
-    return array.map((element) => {
-        return element.Year;
-    })
+  return array.map((element) => {
+    return element.Year;
+  });
 }
 console.log(onlyTheYears(movies));
 
@@ -413,14 +424,14 @@ console.log(onlyTheYears(movies));
 console.log("-----es 15-----");
 
 function onlyInLastMillennium() {
-    let lastMillennium = [];
-    movies.forEach((element) => {
-        let movieYear = parseInt(element.Year);
-        if (movieYear < 2001) {
-            lastMillennium.push({...element});
-        }
-    })
-    return lastMillennium;
+  let lastMillennium = [];
+  movies.forEach((element) => {
+    let movieYear = parseInt(element.Year);
+    if (movieYear < 2001) {
+      lastMillennium.push({ ...element });
+    }
+  });
+  return lastMillennium;
 }
 console.log(onlyInLastMillennium());
 
@@ -430,12 +441,11 @@ console.log(onlyInLastMillennium());
 console.log("-----es 16-----");
 
 function sumAllTheYears(array) {
-    return array.reduce((sum, element) => {
-        return sum + parseInt(element.Year);
-    }, 0)
+  return array.reduce((sum, element) => {
+    return sum + parseInt(element.Year);
+  }, 0);
 }
 console.log(sumAllTheYears(movies));
-
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
@@ -443,11 +453,11 @@ console.log(sumAllTheYears(movies));
 console.log("-----es 17-----");
 
 function searchByTitle(string) {
-    return movies.filter((element) => {
-        return element.Title.toLowerCase().includes(string.toLowerCase());
-    })
+  return movies.filter((element) => {
+    return element.Title.toLowerCase().includes(string.toLowerCase());
+  });
 }
-console.log(searchByTitle('ave'));
+console.log(searchByTitle("ave"));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -455,31 +465,41 @@ console.log(searchByTitle('ave'));
 */
 console.log("-----es 18-----");
 
-    function searchAndDivide(string) {
-    const myObj = {
-        match: [],
-        unmatch: [],
+function searchAndDivide(string) {
+  const myObj = {
+    match: [],
+    unmatch: [],
+  };
+  movies.forEach((element) => {
+    if (element.Title.toLowerCase().includes(string.toLowerCase())) {
+      myObj.match.push(element);
+    } else {
+      myObj.unmatch.push(element);
     }
-    movies.forEach((element) => {
-        if (element.Title.toLowerCase().includes(string.toLowerCase())) {
-            myObj.match.push(element);
-        } else {
-            myObj.unmatch.push(element);
-        }
-    })
-    return myObj;
+  });
+  return myObj;
 }
-console.log(searchAndDivide('ng'));
+console.log(searchAndDivide("ng"));
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+console.log("-----es 19-----");
+
+function removeIndex(num) {
+  if (num >= 0 && num < movies.length) {
+    movies.splice(num, 1);
+  }
+  return movies;
+}
+console.log(removeIndex(0));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
+console.log("-----es 20-----");
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
