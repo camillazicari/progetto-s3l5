@@ -500,16 +500,22 @@ console.log(removeIndex(0));
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
-const container = document.getElementById('container');
-
+const myContainer = function() {
+    const container = document.getElementById('container');
+}
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-const cell = document.querySelectorAll('td');
+const myCells = function() {
+    document.querySelectorAll('td');
+}
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+function print() {
+
+}
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
