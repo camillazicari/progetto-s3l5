@@ -277,6 +277,15 @@ console.log(isThisAnEmail('camilla@me.it'));
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+console.log("-----es 7-----");
+
+function whatDayIsIt() {
+    let today = new Date();
+    let dayOfWeek = today.getDay();
+    let nameOfDays = ['Domenica','Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'];
+    return nameOfDays[dayOfWeek];
+}
+console.log(whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
