@@ -357,6 +357,14 @@ console.log(isTodayMyBirthday());
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
+console.log("-----es 11-----");
+
+function deleteProp(obj, string) {
+    delete obj[string];
+    return obj;
+}
+let bro = {name: 'Alessandro', surname: 'Zicari', age: 16};
+console.log(deleteProp(bro, 'age'));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
