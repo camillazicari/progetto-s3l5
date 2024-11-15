@@ -144,9 +144,19 @@ console.log(random);
 */
 console.log("-----es C-----");
 
+let me = {
+    name: 'Camilla',
+    surname: 'Zicari',
+    age: 23,
+};
+console.log(me);
+
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
+console.log("-----es D-----");
+
+
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
