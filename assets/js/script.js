@@ -170,7 +170,7 @@ console.log(me);
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
-console.log("-----es D-----");
+console.log("-----es F-----");
 
 me.skills.push('bootstrap');
 console.log(me);
@@ -178,6 +178,10 @@ console.log(me);
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
+console.log("-----es G-----");
+
+me.skills.pop();
+console.log(me);
 
 // Funzioni
 
