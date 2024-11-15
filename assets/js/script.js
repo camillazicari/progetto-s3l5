@@ -333,9 +333,7 @@ function howManyDays(date) {
   let today = new Date();
   let myDate = new Date(date);
   let howManyMilliseconds = today - myDate;
-  let howManySeconds = howManyMilliseconds / 1000;
-  let howManyMinutes = howManySeconds / 3600;
-  let manyDays = howManyMinutes / 24;
+  let manyDays = howManyMilliseconds/(1000*60*60*24);
   return Math.floor(manyDays);
 }
 console.log(howManyDays("2024-11-1"));
