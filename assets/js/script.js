@@ -348,8 +348,8 @@ function isTodayMyBirthday() {
   let myBirthdayMonth = 3;
   let myBirthdayDay = 21;
   if (
-    today.getMonth + 1 === myBirthdayMonth &&
-    today.getDate === myBirthdayDay
+    today.getMonth() + 1 === myBirthdayMonth &&
+    today.getDate() === myBirthdayDay
   ) {
     return true;
   } else {
