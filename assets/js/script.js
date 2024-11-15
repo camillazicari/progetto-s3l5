@@ -333,7 +333,7 @@ function howManyDays(date) {
   let today = new Date();
   let myDate = new Date(date);
   let howManyMilliseconds = today - myDate;
-  let manyDays = howManyMilliseconds/(1000*60*60*24);
+  let manyDays = howManyMilliseconds / (1000 * 60 * 60 * 24);
   return Math.floor(manyDays);
 }
 console.log(howManyDays("2024-11-1"));
@@ -541,11 +541,11 @@ red();
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-const myList = document.getElementById('myList')
+const myList = document.getElementById("myList");
 function addLi() {
-    let newLi = document.createElement('li');
-    newLi.innerText = 'li 5 in javascript';
-    myList.appendChild(newLi);
+  let newLi = document.createElement("li");
+  newLi.innerText = "li 5 in javascript";
+  myList.appendChild(newLi);
 }
 addLi();
 
@@ -553,7 +553,7 @@ addLi();
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 function svuotaLista() {
-    myList.innerHTML = '';
+  myList.innerHTML = "";
 }
 svuotaLista();
 
@@ -561,11 +561,11 @@ svuotaLista();
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
-const tableRows = document.querySelectorAll('tr');
+const tableRows = document.querySelectorAll("tr");
 function addClass() {
-    tableRows.forEach((element) => {
-        element.classList.add('test');
-    })
+  tableRows.forEach((element) => {
+    element.classList.add("test");
+  });
 }
 addClass();
 
@@ -585,10 +585,10 @@ addClass();
 console.log("-----es 27-----");
 
 function halfTree(height) {
-    for (let i=1; i<=height; i++) {
-        let asterisco = '*';
-        console.log(asterisco.repeat(i));
-    }
+  for (let i = 1; i <= height; i++) {
+    let asterisco = "*";
+    console.log(asterisco.repeat(i));
+  }
 }
 halfTree(5);
 
@@ -607,20 +607,19 @@ halfTree(5);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+console.log("-----es 29-----");
 
 function isItPrime(num) {
-    if (num === 2) {
-        return true;
-    } 
-    if  (num<2 || num%2 === 0) {
-        return false;
+    if (num < 2) {
+      return false;
     }
-    for (let i=2; i<=Math.sqrt(num); i++) {
-        if (num % i === 0) {
-             console.log(false)
-        } else {
-            console.log(true);
-        }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        return false; 
+      } else {
+        return true; 
+      }
     }
-}
-isItPrime(53);
+  }
+  
+isItPrime(40);
