@@ -430,7 +430,7 @@ console.log(onlyInLastMillennium());
 console.log("-----es 16-----");
 
 function sumAllTheYears(array) {
-    return movies.reduce((sum, element) => {
+    return array.reduce((sum, element) => {
         return sum + parseInt(element.Year);
     }, 0)
 }
@@ -440,6 +440,14 @@ console.log(sumAllTheYears(movies));
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+console.log("-----es 17-----");
+
+function searchByTitle(string) {
+    return movies.filter((element) => {
+        return element.Title.toLowerCase().includes(string.toLowerCase());
+    })
+}
+console.log(searchByTitle('ave'));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
