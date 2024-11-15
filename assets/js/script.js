@@ -156,7 +156,8 @@ console.log(me);
 */
 console.log("-----es D-----");
 
-
+delete me.age;
+console.log(me);
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
