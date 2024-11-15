@@ -172,7 +172,7 @@ console.log(me);
 */
 console.log("-----es F-----");
 
-me.skills.push("bootstrap");
+me.skills.push("c++");
 console.log(me);
 
 /* ESERCIZIO G
