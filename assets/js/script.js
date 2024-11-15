@@ -561,6 +561,14 @@ svuotaLista();
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
+const tableRows = document.querySelectorAll('tr');
+function addClass() {
+    tableRows.forEach((element) => {
+        element.classList.add('test');
+    })
+}
+addClass();
+
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
