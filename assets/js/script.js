@@ -500,6 +500,7 @@ console.log(removeIndex(0));
 
 const myContainer = function () {
   const container = document.getElementById("container");
+  return container;
 };
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
@@ -507,6 +508,7 @@ const myContainer = function () {
 
 const myCells = function () {
   const cells = document.querySelectorAll("td");
+  return cells;
 };
 
 /* ESERCIZIO 22
@@ -551,7 +553,7 @@ addLi();
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 function svuotaLista() {
-    myList.innerText = '';
+    myList.innerHTML = '';
 }
 svuotaLista();
 
@@ -608,16 +610,16 @@ halfTree(3);
 
 function isItPrime(num) {
     if (num === 2) {
-        return 'è un numero primo';
+        return true;
     } 
     if  (num<2 || num%2 === 0) {
-        return 'non è un numero primo'
+        return false;
     }
     for (let i=2; i<=Math.sqrt(num); i++) {
         if (num % i === 0) {
-             console.log('non è un numero primo')
+             console.log(false)
         } else {
-            console.log('è un numero primo');
+            console.log(true);
         }
     }
 }
