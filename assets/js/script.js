@@ -136,7 +136,7 @@ console.log(sum);
 */
 console.log("-----es B-----");
 
-let random = Math.floor(Math.random()*20)+1;
+let random = Math.floor(Math.random() * 21);
 console.log(random);
 
 /* ESERCIZIO C
@@ -145,9 +145,9 @@ console.log(random);
 console.log("-----es C-----");
 
 let me = {
-    name: 'Camilla',
-    surname: 'Zicari',
-    age: 23,
+  name: "Camilla",
+  surname: "Zicari",
+  age: 23,
 };
 console.log(me);
 
@@ -164,7 +164,7 @@ console.log(me);
 */
 console.log("-----es E-----");
 
-me.skills = ['javascript', 'css', 'html'];
+me.skills = ["javascript", "css", "html"];
 console.log(me);
 
 /* ESERCIZIO F
@@ -172,7 +172,7 @@ console.log(me);
 */
 console.log("-----es F-----");
 
-me.skills.push('bootstrap');
+me.skills.push("bootstrap");
 console.log(me);
 
 /* ESERCIZIO G
@@ -188,6 +188,13 @@ console.log(me);
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
+console.log("-----es 1-----");
+
+function dice() {
+    let num = Math.floor(Math.random()*6)+1;
+    return num;
+}
+console.log(dice());
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
