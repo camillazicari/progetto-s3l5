@@ -608,11 +608,19 @@ halfTree(3);
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-function numeriPrimi(num) {
-    if (num%2 === 0 && num !== 2) {
-        return 'non è un numero primo'
-    } else if (num/num === 1 && num/1 === num) {
+function isItPrime(num) {
+    if (num === 2) {
         return 'è un numero primo';
+    } 
+    if  (num<2 || num%2 === 0) {
+        return 'non è un numero primo'
+    }
+    for (let i=2; i<=Math.sqrt(num); i++) {
+        if (num % i === 0) {
+             console.log('non è un numero primo')
+        } else {
+            console.log('è un numero primo');
+        }
     }
 }
-console.log(numeriPrimi(18));
+isItPrime(53);
