@@ -585,7 +585,7 @@ addClass();
 console.log("-----es 27-----");
 
 function halfTree(height) {
-    for (let i=0; i<=height; i++) {
+    for (let i=1; i<=height; i++) {
         let asterisco = '*';
         console.log(asterisco.repeat(i));
     }
