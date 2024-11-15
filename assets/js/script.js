@@ -363,12 +363,27 @@ function deleteProp(obj, string) {
     delete obj[string];
     return obj;
 }
-let bro = {name: 'Alessandro', surname: 'Zicari', age: 16};
-console.log(deleteProp(bro, 'age'));
+const brother = {name: 'Alessandro', surname: 'Zicari', age: 16};
+console.log(deleteProp(brother, 'age'));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
+console.log("-----es 12-----");
+
+function newestMovie() {
+    let myYear = 1000;
+    let recentMovie;
+    movies.forEach((element) => {
+        let movieYear = parseInt(element.Year);
+        if (movieYear > myYear) {
+            myYear = movieYear;
+            recentMovie = {...element};
+        }
+    })
+    return recentMovie;
+    }
+console.log(newestMovie());
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
