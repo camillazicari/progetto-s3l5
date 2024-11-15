@@ -330,11 +330,24 @@ function howManyDays(date) {
     let manyDays = howManyMinutes/24;
     return Math.floor(manyDays);
 }
-console.log(howManyDays('2024-11-11'));
+console.log(howManyDays('2024-11-1'));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+console.log("-----es 10-----");
+
+function isTodayMyBirthday() {
+    let today = new Date();
+    let myBirthdayMonth = 3;
+    let myBirthdayDay = 21;
+    if (today.getMonth + 1 === myBirthdayMonth && today.getDate === myBirthdayDay) {
+        return true;
+    } else {
+        return false
+    }
+}
+console.log(isTodayMyBirthday());
 
 // Arrays & Oggetti
 
