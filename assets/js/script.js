@@ -220,9 +220,13 @@ console.log(whoIsBigger(-5, -1));
 console.log("-----es 3-----");
 
 function splitMe(string) {
-    return string.split(' '); 
+  if (string !== "") {
+    return string.split(" ");
+  } else {
+    return "la stringa è vuota";
+  }
 }
-console.log(splitMe('ciao a tutti'));
+console.log(splitMe(""));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
