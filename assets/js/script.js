@@ -250,6 +250,18 @@ console.log(deleteOne("volare in alto", true));
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+console.log("-----es 5-----");
+
+function onlyLetters(string) {
+    let noNumbers= '';
+    for (let i=0; i<string.length; i++) {
+        if (isNaN(string[i]) || string[i] === ' ') {
+            noNumbers += string[i];
+        }
+    }
+    return noNumbers;
+}
+console.log(onlyLetters('740 pagine di codice'));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
