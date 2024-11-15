@@ -607,3 +607,12 @@ halfTree(3);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+function numeriPrimi(num) {
+    if (num%2 === 0 && num !== 2) {
+        return 'non è un numero primo'
+    } else if (num/num === 1 && num/1 === num) {
+        return 'è un numero primo';
+    }
+}
+console.log(numeriPrimi(18));
