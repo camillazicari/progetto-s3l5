@@ -191,14 +191,26 @@ console.log(me);
 console.log("-----es 1-----");
 
 function dice() {
-    let num = Math.floor(Math.random()*6)+1;
-    return num;
+  let num = Math.floor(Math.random() * 6) + 1;
+  return num;
 }
 console.log(dice());
 
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+console.log("-----es 2-----");
+
+function whoIsBigger(num1,num2) {
+    if (num1 === num2) {
+        return 'sono uguali';
+    } else if (num1>num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+console.log(whoIsBigger(-5,-1));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
