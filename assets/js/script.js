@@ -527,7 +527,6 @@ print();
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-console.log("-----es 23-----");
 
 const links = document.querySelectorAll("a");
 
@@ -541,6 +540,14 @@ red();
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+
+const myList = document.getElementById('myList')
+function addLi() {
+    let newLi = document.createElement('li');
+    newLi.innerText = 'li 5 in javascript';
+    myList.appendChild(newLi);
+}
+addLi();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
