@@ -220,18 +220,30 @@ console.log(whoIsBigger(-5, -1));
 console.log("-----es 3-----");
 
 function splitMe(string) {
-  if (string !== "") {
+  if (string.trim() !== "") {
     return string.split(" ");
   } else {
     return "la stringa è vuota";
   }
 }
-console.log(splitMe(""));
+console.log(splitMe("ciao a tutti"));
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+console.log("-----es 4-----");
+
+function deleteOne(string, boolean) {
+  if (string.trim() === "") {
+    return "la stringa è vuota";
+  } else if (boolean === true) {
+    return string.substring(1);
+  } else {
+    return string.substring(0, string.length - 1);
+  }
+}
+console.log(deleteOne("volare in alto", true));
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
